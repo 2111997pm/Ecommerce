@@ -7,8 +7,8 @@ import SliderSection from './components/SliderSection';
 const App = () => {
   return (
     <>
-    <Navbar />
-    <SliderSection/>
+      <Navbar />
+      <SliderSection />
 
 
     </>
