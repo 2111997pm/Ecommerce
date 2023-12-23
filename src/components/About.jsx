@@ -6,10 +6,10 @@ const About = () => {
             <h4>About</h4>
             <div className='row'>
                 <div className='col-4'>
-                    <img src="//unsplash.it/400" alt="" />
+                    <img src="//unsplash.it/300" alt="" />
 
                 </div>
-                <div>
+                <div className='col-8'>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, architecto et voluptatum accusantium itaque animi repudiandae similique enim dolore facere, officia quos unde pariatur voluptate sapiente nam inventore vitae quis!
                         At iusto nemo non natus repellat quisquam exercitationem quam possimus ut assumenda quidem ullam, minima ipsa. At quos fugiat impedit recusandae, aspernatur voluptatum, amet quidem hic fuga in inventore a.
