@@ -6,6 +6,7 @@ import Home from './components/Home';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Footer from './components/Footer';
 import SliderSection from './components/SliderSection';
+import ContactUs from './components/ContactUs';
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
       <SliderSection/>
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/' element={<Store />} /> */}
+        <Route path='/contactus' element={<ContactUs />} />
         <Route  path='/About' element={<About />} />
         {/* <Route path='/' element={<Home />} />
         <Route path='/' element={<Home />} />
