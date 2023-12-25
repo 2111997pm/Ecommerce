@@ -11,9 +11,9 @@ const ContactUs = (props) => {
     event.preventDefault();
 
     const data = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value
+      name: nameRef.current.valueOf,
+      email: emailRef.current.valueOf,
+      phone: phoneRef.current.valueOf
     }
 
     console.log(data);
