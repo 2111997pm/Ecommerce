@@ -1,4 +1,7 @@
 import React, { useRef } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 
 const ContactUs = (props) => {
@@ -11,37 +14,42 @@ const ContactUs = (props) => {
     event.preventDefault();
 
     const data = {
-      name: nameRef.current.valueOf,
-      email: emailRef.current.valueOf,
-      phone: phoneRef.current.valueOf
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value
     }
 
     console.log(data);
-    // props.onSubmit(data);
+    props.onSubmit(data);
 
-    nameRef.current.valueOf = "";
-    emailRef.current.valueOf = "";
-    phoneRef.current.valueOf = ""
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    phoneRef.current.value = ""
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" ref={nameRef} />
-        </div>
-        <div>
-          <label htmlFor="email">Email ID</label>
-          <input type="email" id="email" ref={emailRef} />
-        </div>
-        <div>
-          <label htmlFor="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder='+910000000000' ref={phoneRef} />
-        </div>
-        <button type='submit'>Submit</button>
-      </form>
-    </div>
+    <Form className='container mt-5 w-75 bg-dark text-white p-5' onSubmit={submitHandler} style={{ borderRadius: '10px' }}>
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter name" ref={nameRef} required />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" placeholder="Email" ref={emailRef} required />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="number">
+        <Form.Label>Mobile Number</Form.Label>
+        <Form.Control type="number" placeholder="Phone number" ref={phoneRef} re />
+      </Form.Group>
+
+      <Button variant="success" type="submit" className='mt-3'>
+        Submit
+      </Button>
+    </Form>
+
   )
 }
 

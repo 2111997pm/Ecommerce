@@ -16,7 +16,7 @@ const Store = () => {
                             <Card.Text>
                                 {ele.price}
                             </Card.Text>
-                            <Button variant="primary">Add To Cart</Button>
+                            <Button variant="primary" >Add To Cart</Button>
                         </Card.Body>
                     </Card>
                 ))
