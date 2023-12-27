@@ -1,13 +1,15 @@
 import React from 'react'
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Home from './components/Home';
+import Navbar from './components/body/Navbar';
+import About from './components/body/About'
+import Home from './components/body/Home';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Footer from './components/Footer';
-import SliderSection from './components/SliderSection';
-import ContactUs from './components/ContactUs';
-import Store from './components/Store';
-import SingleProduct from './components/SingleProduct';
+import Footer from './components/body/Footer';
+import SliderSection from './components/body/SliderSection';
+import ContactUs from './components/body/ContactUs';
+import Store from './components/body/Store';
+import SingleProduct from './components/body/SingleProduct';
+// import LogInForm from './components/body/logIn/LogInForm';
+
 
 
 const App = () => {
@@ -35,7 +37,7 @@ const App = () => {
         <Route path='/contactus' element={<ContactUs onSubmit={addDataHandler}/>} />
         <Route path='/About' element={<About />} />
         <Route path='/store' element={<Store />} />
-        {/* <Route path='/login' element={<LogIn />} /> */}
+        {/* <Route path='/login' element={<LogInForm />} /> */}
         <Route path='/singleproduct/:id' element={<SingleProduct />} />
       </Routes>
       <Footer />

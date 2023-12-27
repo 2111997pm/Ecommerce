@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import { Tours } from './data/Tours'
+import { Tours } from '../data/Tours'
 import Table from 'react-bootstrap/Table';
 
 

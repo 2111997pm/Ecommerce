@@ -16,6 +16,7 @@ const LogInForm = () => {
     const switchHandler = () => {
         setIsLogIn((prev) => !prev)
     }
+
     const submitHandler = (e) => {
         e.preventDefault();
         const inputEmail = email.current.value
@@ -25,7 +26,7 @@ const LogInForm = () => {
 
         let url;
         if (isLoading) {
-            url = 'fdf'
+            url = ''
         } else {
             url = "gd"
         }
@@ -84,4 +85,4 @@ const LogInForm = () => {
     )
 }
 
-export default LogInForm
+export default LogInForm;
